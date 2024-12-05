@@ -17,3 +17,4 @@ new_file_path = "new_data.csv"
 df.to_csv(new_file_path, index=False)
 
 print(f"처리된 데이터가 '{new_file_path}'에 저장되었습니다.")
+
