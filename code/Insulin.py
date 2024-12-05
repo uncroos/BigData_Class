@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # 1. 데이터 읽기
-file_path = '/Users/an-yohan/Documents/GitHub/BigData_Class/data/diabetes.csv'  # 데이터 파일 경로를 확인하세요.
+file_path = '/Users/an-yohan/Documents/GitHub/BigData_Class/data/diabetes.csv'
 data = pd.read_csv(file_path)
 
 # 2. 데이터 전처리 (0값 처리)
