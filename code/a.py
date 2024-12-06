@@ -1,16 +1,17 @@
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import seaborn as sns
 
-# 한글 폰트 설정
-mpl.rcParams['font.family'] = 'AppleGothic' 
-
+# 한글 폰트 설정 (OS에 맞게 설정)
+mpl.rcParams['font.family'] = 'AppleGothic'  # Mac
 # 음수 기호 깨짐 방지
 mpl.rcParams['axes.unicode_minus'] = False
 
-# 데이터 로드
+# 데이터 로드 및 요약
 data = pd.read_csv('/Users/an-yohan/Documents/GitHub/BigData_Class/data/new_data.csv')
+print(data.describe())
+
 # 1. Glucose vs Outcome
 plt.figure(figsize=(8, 6))
 sns.kdeplot(data=data, x='Glucose', hue='Outcome', fill=True, palette='husl', alpha=0.5)
